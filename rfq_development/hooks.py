@@ -104,13 +104,11 @@ app_license = "IT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Request for Quotation": {
+		"before_save": "rfq_development.rfq_development.rfq_development.validate_for_items",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
